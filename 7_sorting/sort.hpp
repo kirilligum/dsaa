@@ -14,3 +14,10 @@ void insertion_sort(vector<t> &a) {
     a[j]=move(tmp);
   }
 }
+
+template <
+  typename t
+> void shell_sort(vector<t> &a) {
+  for(int gap = a.size()/2; gap > 0; gap/=2) {
+  }
+}
