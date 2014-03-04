@@ -15,5 +15,7 @@ int main(int argc, char const *argv[]) {
   copy(begin(v),end(v),ostream_iterator<int>(cout," ")); cout << endl;
   auto vs=v; insertion_sort<int>(vs);
   copy(begin(vs),end(vs),ostream_iterator<int>(cout," ")); cout << endl;
+  vs=v; shell_sort<int>(vs);
+  copy(begin(vs),end(vs),ostream_iterator<int>(cout," ")); cout << endl;
   return 0;
 }
