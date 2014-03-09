@@ -23,5 +23,7 @@ int main(int argc, char const *argv[]) {
   copy(begin(vs),end(vs),ostream_iterator<int>(cout," ")); cout << endl;
   vs=v; simple_quick_sort<int>(vs);
   copy(begin(vs),end(vs),ostream_iterator<int>(cout," ")); cout << endl;
+  cout <<"quick_sort   ";vs=v; quick_sort<int>(vs);
+  copy(begin(vs),end(vs),ostream_iterator<int>(cout," ")); cout << endl;
   return 0;
 }

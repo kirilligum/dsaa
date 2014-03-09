@@ -133,8 +133,24 @@ template <
 > void quick_sort(vector<t> &a, int left, int right) {
   if(right-left>=10){
     const t& pivot= median3(a,left,right);
+    int i=left,j=right-1;
+    for(;;) {
+      while(a[++i]<pivot) {}
+      while(pivot<a[--j]) {}
+      if(i<j)
+        swap(a[i],a[j]);
+      else
+        break;
+    }
+    swap(a[i],a[right-1]);
+    quick_sort(a,left,i-1);
+    quick_sort(a,i+1,right);
   } else {
     insertion_sort(a,left,right);
   }
 }
-
+template <
+  typename t
+> void quick_sort(vector<t> &a) {
+  quick_sort(a, 0, a.size()-1);
+}
