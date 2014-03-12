@@ -26,6 +26,9 @@ int main(int argc, char const *argv[]) {
   lst=original;radix_sort<string>(lst);
   copy(begin(lst),end(lst),ostream_iterator<string>(cout,"  "));
   cout << endl;
+  lst=original;counting_radix_sort<string>(lst);
+  copy(begin(lst),end(lst),ostream_iterator<string>(cout,"  "));
+  cout << endl;
   lst=original;sort(begin(lst),end(lst));
   copy(begin(lst),end(lst),ostream_iterator<string>(cout,"  "));
   cout << endl;
